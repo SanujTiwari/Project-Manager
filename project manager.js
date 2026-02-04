@@ -9,13 +9,15 @@ function addData() {
   }
 
   let tableBody = document.getElementById("tableBody");
-
   let row = document.createElement("tr");
 
   row.innerHTML = `
     <td>${name}</td>
     <td>${age}</td>
     <td>${course}</td>
+    <td>
+      <button onclick="deleteRow(this)">Delete</button>
+    </td>
   `;
 
   tableBody.appendChild(row);
@@ -23,4 +25,9 @@ function addData() {
   document.getElementById("name").value = "";
   document.getElementById("age").value = "";
   document.getElementById("course").value = "";
+}
+
+function deleteRow(button) {
+  let row = button.parentElement.parentElement;
+  row.remove();
 }
