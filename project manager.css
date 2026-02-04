@@ -137,3 +137,10 @@ tr:hover td {
     width: 100%;
   }
 }
+td button {
+  background-color: #dc2626;
+}
+
+td button:hover {
+  background-color: #b91c1c;
+}
